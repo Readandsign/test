@@ -8,11 +8,11 @@
 <style>
 .container{
 display:flex;
-flex-wrap:wrap;
+flex-direction:column;
 }
 .img{
-min-width:150px;
-max-width:150px;
+min-width:300px;
+max-width:300px;
 }
 </style>
 
@@ -23,6 +23,7 @@ for(let i = 1; i < 29; i++){
 let img = document.createElement("img");
 img.className = "img";
 img.src = `images/a${i}.jpg`;
+img.loading = "lazy";
 container.append(img);
 }
 </script>
